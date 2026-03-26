@@ -41,3 +41,12 @@
 ### City -> id, name, created_at, updated_at
 ### Airport -> id, name, address, city_id, created_at, updated_at
     Relationship -> City has many airports and Airport belongs to a city(one to many relation)
+
+```
+  npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
+```
+
+### Home Work
+- Expose an api that can add multiple cities in one go (may be pass an array in request.body, no loops at all)
+- write crud for airports
+- Add an api in the City resource for getting all the airports of a city
